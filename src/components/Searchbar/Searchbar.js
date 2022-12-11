@@ -1,4 +1,11 @@
 import { Component } from 'react';
+import { BsSearch } from 'react-icons/bs';
+import {
+  PhotoSearchbar,
+  SearchForm,
+  SearchFormBtn,
+  Input,
+} from './Searchbar.style';
 
 export default class Searchbar extends Component {
   state = {
@@ -21,13 +28,15 @@ export default class Searchbar extends Component {
 
   render() {
     return (
-      <header>
-        <form onSubmit={this.onFormSubmit}>
-          <button type="submit">
-            <span>Search</span>
-          </button>
+      <PhotoSearchbar>
+        <SearchForm onSubmit={this.onFormSubmit}>
+          <SearchFormBtn type="submit">
+            <span>
+              <BsSearch />
+            </span>
+          </SearchFormBtn>
 
-          <input
+          <Input
             type="text"
             autoComplete="off"
             autoFocus
@@ -35,8 +44,8 @@ export default class Searchbar extends Component {
             value={this.state.value}
             onChange={this.onInputChange}
           />
-        </form>
-      </header>
+        </SearchForm>
+      </PhotoSearchbar>
     );
   }
 }
