@@ -1,5 +1,4 @@
 import axios from 'axios';
-import toast from 'react-hot-toast';
 
 const API_KEY = '30575168-17224cd1fdcc15493416f473f';
 

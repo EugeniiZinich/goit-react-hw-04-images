@@ -5,7 +5,6 @@ import FetchPicture from 'components/ApiSevise/FetchPicture';
 import ImageGallery from '../ImageGallery/ImageGallery';
 import Button from '../Button/Button';
 import { Container } from 'components/Container/Container.style';
-// import { Audio } from 'react-loader-spinner';
 import MyLoader from 'components/Loader/Loader';
 
 export default class App extends Component {
