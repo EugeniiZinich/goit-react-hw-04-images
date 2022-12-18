@@ -5,7 +5,7 @@ import { GalleryItem, ImgGallery } from './ImageGalleryItem.style';
 export default function ImageGalleryItem(gallery) {
   const [showModal, setShowModal] = useState(false);
 
-  const { id, webformatURL, largeImageURL, tag } = gallery;
+  const { id, webformatURL, largeImageURL, tags } = gallery;
 
   const toggleModal = () => {
     setShowModal(prevState => !prevState);
@@ -14,12 +14,7 @@ export default function ImageGalleryItem(gallery) {
   return (
     <>
       <GalleryItem key={id}>
-        <ImgGallery
-          id={id}
-          src={webformatURL}
-          alt={tag}
-          onClick={toggleModal}
-        />
+        <ImgGallery src={webformatURL} alt={tags} onClick={toggleModal} />
       </GalleryItem>
       {showModal && (
         <Modal modalImg={largeImageURL} toggleModal={toggleModal} />

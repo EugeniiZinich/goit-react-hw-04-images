@@ -5,12 +5,13 @@ import PropTypes from 'prop-types';
 const ImageGallery = ({ gallery }) => {
   return (
     <GalleryList>
-      {gallery.map(({ id, webformatURL, largeImageURL }) => {
+      {gallery.map(({ id, webformatURL, largeImageURL, tags }) => {
         return (
           <ImageGalleryItem
-            key={id}
+            id={id}
             webformatURL={webformatURL}
             largeImageURL={largeImageURL}
+            tags={tags}
           />
         );
       })}
