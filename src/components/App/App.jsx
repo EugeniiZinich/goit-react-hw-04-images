@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import Searchbar from '../Searchbar/Searchbar';
-import FetchPicture from 'components/ApiSevise/FetchPicture';
+import FetchPicture from 'services/ApiSevise/FetchPicture';
 import ImageGallery from '../ImageGallery/ImageGallery';
 import Button from '../Button/Button';
 import { Container } from 'components/Container/Container.style';
@@ -42,6 +42,7 @@ export default function App() {
     setValue(value);
     setPage(1);
     setPicture([]);
+    setShowBtn(false);
   };
 
   const loadMore = () => {
