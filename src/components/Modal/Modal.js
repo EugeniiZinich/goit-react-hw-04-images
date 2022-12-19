@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { Overlay, ModalImg } from './Modal.style';
 
 export default function Modal({ modalImg, toggleModal }) {
